@@ -4,6 +4,6 @@ import org.koin.core.context.startKoin
 
 fun initKoin() {
     startKoin {
-        modules(dataModule + coroutineModule + viewModelModule)
+        modules(dataModule + coroutineModule + viewModelModule + httpClientModule)
     }
 }

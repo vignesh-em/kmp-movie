@@ -27,7 +27,8 @@ class SearchResultsViewModel(private val repository: MuViRepository) : ViewModel
             } else {
                 repository.getSearchResults(query)
             }
-        }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList<MovieSearchResult>())
+        }
+        .stateIn(viewModelScope, SharingStarted.Lazily, emptyList<MovieSearchResult>())
 
     fun updateSearchQuery(query: String) {
         _searchQuery.value = query
